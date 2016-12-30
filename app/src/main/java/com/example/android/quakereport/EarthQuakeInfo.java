@@ -13,6 +13,7 @@ public class EarthQuakeInfo {
         this.mMagnitude = magnitude;
         this.mLocation = location;
         this.mDate = date;
+        this.mWebSiteUrl = webSiteUrl;
     }
 
     public long getDate() {
@@ -25,5 +26,9 @@ public class EarthQuakeInfo {
 
     public double getMagnitude() {
         return mMagnitude;
+    }
+
+    public String getWebSiteUrl() {
+        return mWebSiteUrl;
     }
 }
