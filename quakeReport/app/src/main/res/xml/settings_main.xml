@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings_title">
+    <EditTextPreference
+        android:defaultValue="@string/settings_min_magnitude_default"
+        android:title="@string/settings_min_magnitude_label"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        android:key="@string/settings_min_magnitude_key"/>
+</PreferenceScreen>
