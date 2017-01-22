@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">NewsApp</string>
+    <string name="article_title_name">Title</string>
+    <string name="article_section_name">Section</string>
+    <string name="article_contents_name">Contents</string>
+
+    <string name="section_politic_name">Politic</string>
+    <string name="section_economy_name">Economy</string>
+    <string name="section_society_name">Society</string>
+    <string name="section_sports_name">Sports</string>
 </resources>
