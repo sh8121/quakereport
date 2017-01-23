@@ -11,8 +11,11 @@ import java.util.List;
 
 public class NewsLoader extends AsyncTaskLoader<List<NewsInfo>> {
 
-    public NewsLoader(Context context) {
+    private String mSectionName;
+
+    public NewsLoader(Context context, String sectionName) {
         super(context);
+        mSectionName = sectionName;
     }
 
     @Override
@@ -23,6 +26,6 @@ public class NewsLoader extends AsyncTaskLoader<List<NewsInfo>> {
 
     @Override
     public List<NewsInfo> loadInBackground() {
-        return NewsUtil.returnNewsInfos();
+        return NewsUtil.returnNewsInfos(mSectionName);
     }
 }

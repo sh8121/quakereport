@@ -1,6 +1,7 @@
 package com.example.sboo.newsapp;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -20,10 +21,25 @@ public class SectionAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
+        SectionFragment fragment = new SectionFragment();
+        Bundle bundle = new Bundle();
+
         if(position == 0){
-            return new PoliticFragment();
+            bundle.putString(mContext.getString(R.string.section_bundle_key), mContext.getString(R.string.section_politic_bundle_value));
         }
-        return new PoliticFragment();
+        else if(position == 1){
+            bundle.putString(mContext.getString(R.string.section_bundle_key), mContext.getString(R.string.section_business_bundle_value));
+        }
+        else if(position == 2){
+            bundle.putString(mContext.getString(R.string.section_bundle_key), mContext.getString(R.string.section_society_bundle_value));
+        }
+        else if(position == 3){
+            bundle.putString(mContext.getString(R.string.section_bundle_key), mContext.getString(R.string.section_sport_bundle_value));
+        }
+
+        fragment.setArguments(bundle);
+
+        return fragment;
     }
 
     @Override
@@ -37,7 +53,7 @@ public class SectionAdapter extends FragmentPagerAdapter {
             return mContext.getString(R.string.section_politic_name);
         }
         else if(position == 1){
-            return mContext.getString(R.string.section_economy_name);
+            return mContext.getString(R.string.section_business_name);
         }
         else if(position == 2){
             return mContext.getString(R.string.section_society_name);

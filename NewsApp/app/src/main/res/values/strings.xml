@@ -5,7 +5,13 @@
     <string name="article_contents_name">Contents</string>
 
     <string name="section_politic_name">Politic</string>
-    <string name="section_economy_name">Economy</string>
+    <string name="section_business_name">Business</string>
     <string name="section_society_name">Society</string>
     <string name="section_sports_name">Sports</string>
+
+    <string name="section_bundle_key">sectionName</string>
+    <string name="section_politic_bundle_value">politic</string>
+    <string name="section_business_bundle_value">business</string>
+    <string name="section_society_bundle_value">society</string>
+    <string name="section_sport_bundle_value">sport</string>
 </resources>
